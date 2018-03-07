@@ -4,7 +4,7 @@ Example taken from
 
 Run the Makefile.parallel with:
 ```
-make -j -f Makefile.parallel
+make -j 3 -f Makefile.parallel
 ```
 
 From the GNU Make manual:
