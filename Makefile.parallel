@@ -1,0 +1,9 @@
+## example Makefile for parallel processing of dependencies
+
+BINS = $(shell echo *.bash)
+
+.PHONY: $(BINS)
+run: $(BINS)
+
+*.bash:
+	./$@
