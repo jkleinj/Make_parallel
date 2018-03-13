@@ -1,9 +1,15 @@
 ## example Makefile for parallel processing of dependencies
 
-BINS = $(shell echo *.bash)
+SEQ = $(shell seq 1 521)
+$(info SEQ = ${SEQ})
+
+BINS = $(shell echo test/*.bash)
+$(info BINS is ${BINS})
 
 .PHONY: $(BINS)
 run: $(BINS)
 
-*.bash:
-	./$@
+test/*.bash:
+	cat ./$@
+	cp ./$@ ./$@.$$$$
+
